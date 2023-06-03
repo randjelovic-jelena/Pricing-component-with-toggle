@@ -1,0 +1,269 @@
+/*Montserrat Google Font*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+:root{
+
+  /*gradient - Linear Gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%)*/
+  --col-very-light-grayish-blue: hsl(240, 78%, 98%);
+  --col-light-grayish-blue: hsl(234, 14%, 74%);
+  --col-white:#fff;
+  --col-grayish-blue: hsl(233, 13%, 49%);
+  --col-dark-grayish-blue: hsl(232, 13%, 33%);
+
+  --col-violet: rgb(163,168,240);
+  --col-main-card-gradient:linear-gradient(135deg, rgba(163,168,240,1) 0%, rgba(105,111,221,1) 100%);
+ 
+  /*radius*/
+  --card-radius:50px;
+  --radius-btn:7px;
+
+  /*shadow*/
+  --card-shadow: 1px 1px 21px rgba(0,0,0,0.3);
+}
+
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+p{
+  font-size: 15px;
+}
+/*icon*/
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+body{
+  width: 100%;
+  height: 100vh;
+  background: url("../images/bg-bottom.svg") bottom left no-repeat, url("../images/bg-top.svg") top right no-repeat;
+  padding: 4rem 6rem;
+}
+
+/*----------------------------
+---------MAIN HEADER----------
+-----------------------------*/
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 6rem;
+}
+.main-title{
+  margin-bottom: 2rem;
+  color: var(--col-grayish-blue);
+}
+/*toggle button*/
+.toggle{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.toggle-txt{
+  font-size: 0.8rem;
+  color: var(--col-light-grayish-blue);
+  letter-spacing: 0.5px;
+}
+.button-group{
+  margin: 0px 30px;
+  width: 59px;
+  background:var(--col-violet);
+  background:var(--col-main-card-gradient);
+  border-radius: var(--card-radius);
+  height: 31px;
+  display: flex;
+  align-items: center;
+}
+#toggle-btn{
+  border-radius: 100%;
+  width: 25px;
+  height: 25px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4px;
+  cursor: pointer;
+  transition: transform 0.6s linear;
+
+  -webkit-transition: transform 0.6s linear;
+  -moz-transition: transform 0.6s linear;
+  -ms-transition: transform 0.6s linear;
+  -o-transition: transform 0.6s linear;
+}
+#toggle-btn.monthly{
+  transform:translateX(26px);
+
+  -webkit-transform:translateX(26px);
+  -moz-transform:translateX(26px);
+  -ms-transform:translateX(26px);
+  -o-transform:translateX(26px);
+}
+
+/*----------------------------
+---------MAIN CONTENT---------
+-----------------------------*/
+main{
+  margin-inline: auto;
+  max-width: 1070px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  align-items: center;
+}
+.card{
+  box-shadow:var(--card-shadow);
+  padding: 2rem ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-small{
+  background-color:var(--col-white);
+}
+.card-small:first-child{
+  border-radius: 7px 0px 0px 7px;
+}
+.card-small:last-child{
+  border-radius: 0px 7px 7px 0px;
+}
+.card-big{
+  padding:5rem 2rem;
+  border-radius:var(--radius-btn);
+  background: var(--col-violet);
+  background:var(--col-main-card-gradient);
+  color: var(--col-very-light-grayish-blue);
+}
+.card-title{
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+.card-small .card-title{
+  color:var(--col-grayish-blue);
+}
+.card ul{
+  list-style-type: none;
+  margin-bottom: 2rem;
+  width: 100%;
+  text-align: center;
+}
+.list-item{
+  padding: 15px 0px;
+  border-bottom: 1px solid var(--col-light-grayish-blue);
+}
+.card-small .list-item{
+  color:var(--col-dark-grayish-blue);
+}
+.card-big .list-item{
+  color:var(--col-white);
+}
+/*card price*/
+.card-price{
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+.dollar-sign{
+  font-size: 2rem;
+  margin-right: 5px;
+}
+/*card button*/
+.btn{
+  width: 100%;
+  border-radius: 7px;
+  border: 1px solid var(--col-white);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  padding: 13px;
+  
+}
+.card-small-btn{
+  background-image: lightblue;
+  background: var(--col-violet);
+  background: var(--col-main-card-gradient);
+  color: var(--col-very-light-grayish-blue);
+}
+.card-big-btn{
+  color: var(--col-grayish-blue);
+}
+.btn:hover{
+  cursor: pointer;
+}
+.card-small-btn:hover{
+  background:var(--col-white);
+  color: var(--col-dark-grayish-blue);
+  border-color: var(--col-dark-grayish-blue);
+}
+.card-big-btn:hover{
+  background: transparent;
+  color: var(--col-white);
+  border-color: var(--col-white);
+}
+  
+/*----------------------------
+------------MEDIA-------------
+-----------------------------*/
+@media screen and (max-width:1340px) {
+  body{
+    height: unset;
+  }
+  .card-price{
+    font-size:3rem; 
+  }
+}
+@media screen and (max-width:1000px) {
+  body{
+    background: url(../images/bg-bottom.svg) bottom right no-repeat, url(../images/bg-top.svg) top -30px left -80% no-repeat;
+    background-size: 100%, 70%;
+  }
+  main{
+    grid-template-columns: repeat(1,1fr);
+    width: 85%;
+  }
+  .card{
+    margin-bottom: 2rem;
+  }
+  .card-small:first-child,
+  .card-small:last-child,
+  .card-big{
+    border-radius:var(--radius-btn);
+  }
+  .card-small{
+    padding-block: 5rem;
+  }
+  .btn{
+    width: 50%;
+    margin-inline: auto;
+  }
+}
+@media screen and (max-width:770px) {
+  body{
+    padding: 4rem 2rem 3rem 2rem;
+  }
+  .header{
+    margin-bottom: 4rem;
+  }
+  main{
+    width: 100%;
+  }
+}
+@media screen and (max-width:420px) {
+  .btn{
+    width: 70%;
+  }
+  .card{
+    padding: 2rem;
+  }
+  .card-price{
+    font-size: 2rem;
+  }
+}
+
